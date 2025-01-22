@@ -17,6 +17,23 @@ public class CardTrick {
             magicHand[i] = new Card(value, suit);
             System.out.println(suit + " " + value); // Display the magic hand
         }
+        Card luckyCard = new Card(7, "Hearts");
+
+       
+        boolean found = false;
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                found = true;
+                break;
+            }
+        }
+
+       
+        if (found) {
+            System.out.println("Congratulations! The lucky card is in the magic hand!");
+        } else {
+            System.out.println("Sorry, the lucky card is not in the magic hand.");
+        }
        
     
 } 
